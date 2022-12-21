@@ -1,0 +1,208 @@
+{
+  "message_tag_list": {
+    "messages": {
+      "APLStatusChangeDetected": {
+        "conditional": false,
+        "cond-tag": {
+          "tag": {
+            "tagname": "TripSignal",
+            "in-use": false,
+            "nodeId": "ns=4;s=TripSignal",
+            "source": "plc"
+          }
+        },
+        "tags": [
+          {
+            "tag": {
+              "tagname": "TripSignal2",
+              "in-use": false,
+              "nodeId": "ns=4;s=TripSignal",
+              "source": "plc"
+            }
+          }
+        ]
+      },
+      "MaterialProcessed": {
+        "conditional": true,
+        "cond-tag": {
+          "tag": {
+            "tagname": "VMek_Completed",
+            "in-use": true,
+            "nodeId": "ns=2;s=Status_SampleComplete",
+            "source": "vmek"
+          }
+        },
+        "periodical": false,
+        "tags": [
+          {
+            "tag": {
+              "tagname": "MaterialId",
+              "in-use": true,
+              "nodeId": "ns=2;s=Bin_Current_SampleId",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount1",
+              "in-use": true,
+              "nodeId": "ns=2;s=Bin_Current_AcceptedCount1",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount2",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_AcceptedCount2",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount3",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_AcceptedCount3",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount4",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_AcceptedCount4",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount1",
+              "in-use": true,
+              "nodeId": "ns=2;s=Bin_Current_EjectCount1",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount2",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_EjectCount2",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount3",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_EjectCount3",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount4",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_EjectCount4",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "totalCount1",
+              "in-use": true,
+              "nodeId": "ns=2;s=Bin_Current_TotalCount1",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "totalCount2",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_TotalCount2",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "totalCount3",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_TotalCount3",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "totalCount4",
+              "in-use": false,
+              "nodeId": "ns=2;s=Bin_Current_TotalCount4",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "OperatorName",
+              "in-use": false,
+              "nodeId": "ns=4;s=DBoard_OperatorName",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "RecipeName",
+              "in-use": true,
+              "nodeId": "ns=2;s=Bin_Current_Recipe",
+              "source": "vmek"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "RecipeDesignTimeInSeconds",
+              "in-use": false,
+              "nodeId": "ns=4;s=DBoard_RecipeEstCycleTime_Sec",
+              "source": "plc"
+            }
+          }
+        ]
+      },
+      "PLCHeartBeat": {
+        "conditional": false,
+        "periodical": true,
+        "comments": "Currently polling period is not configurable",
+        "tags": [
+          {
+            "tag": {
+              "tagname": "PLC_Heartbeat",
+              "in-use": true,
+              "type": "modbus",
+              "nodeId": "4217/0",
+              "source": "plc"
+            }
+          }
+        ]
+      },
+      "VMEKHeartBeat": {
+        "conditional": false,
+        "periodical": true,
+        "comments": "Currently polling period is not configurable",
+        "tags": [
+          {
+            "tag": {
+              "tagname": "VMek_Heartbeat",
+              "in-use": true,
+              "nodeId": "ns=2;s=Status_Heartbeat",
+              "source": "vmek"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "config": {
+    "mqtt_ca": "/greengrass/v2/AmazonRootCA1.pem",
+    "mqtt_cert": "/greengrass/v2/certificate.pem.crt",
+    "mqtt_private": "/greengrass/v2/private.pem.key",
+    "url": "http://localhost:3300/api/trials",
+    "message_interval": 120,
+    "comments": "Need to add other messages for example Trial ack, so one config file can be used for all"
+  }
+}

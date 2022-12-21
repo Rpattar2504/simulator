@@ -1,0 +1,378 @@
+{
+  "message_tag_list": {
+    "messages": {
+      "APLStatusChangeDetected": {
+        "conditional": false,
+
+        "cond-tag": {
+          "tag": {
+            "tagname": "TripSignal",
+            "in-use": false,
+            "nodeId": "ns=4;s=TripSignal",
+            "source": "plc"
+          }
+
+        },
+        "tags": [
+          {
+            "tag": {
+              "tagname": "TripSignal2",
+              "in-use": false,
+              "nodeId": "ns=4;s=TripSignal",
+              "source": "plc"
+            }
+
+          }
+        ]
+      },
+      "MaterialProcessed": {
+
+        "conditional": true,
+
+        "cond-tag": {
+          "tag": {
+            "tagname": "VMek_Completed",
+            "in-use": true,
+            "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"Process_Completed\"",
+            "source": "plc"
+          }
+
+        },
+        "periodical": false,
+
+        "tags": [
+          {
+            "tag": {
+              "tagname": "MaterialId",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"Current_MatID\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount1",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"AcceptCount1\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount2",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"AcceptCount2\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount3",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"AcceptCount3\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "acceptedCount4",
+              "in-use": false,
+              "nodeId": "ns=4;s=DBoard_VmekAccepted4",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount1",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"EjectCount1\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount2",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"EjectCount2\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount3",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"EjectCount3\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "rejectedCount4",
+              "in-use": false,
+              "nodeId": "ns=4;s=DBoard_VmekRejected4",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "totalCount1",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"TotalCount1\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "totalCount2",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"TotalCount2\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "totalCount3",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"TotalCount3\"",
+              "source": "plc"
+            }
+          },
+
+          {
+            "tag": {
+              "tagname": "totalCount4",
+              "in-use": false,
+              "nodeId": "ns=4;s=DBoard_VmekTotal4",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "targetCount1",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"NewTargetCount1\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "targetCount2",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"NewTargetCount2\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "targetCount3",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"NewTargetCount3\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "OperatorName",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Operators_name\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "RecipeName",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Recipe\".\"Name\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "RecipeDesignTimeInSeconds",
+              "in-use": false,
+              "nodeId": "ns=4;s=DBoard_RecipeEstCycleTime_Sec",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Sheller_SP_Transport",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Sheller\".\"SP_Transport\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Sheller_SP_Discharge",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Sheller\".\"SP_Discharge\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "SeedBoss_SP_Transport",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"SeedBoss\".\"SP_Transport\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "SeedBoss_SP_Discharge",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"SeedBoss\".\"SP_Discharge\"",
+              "source": "plc"
+            }
+          }
+        ]
+      },
+
+      "PLCHeartBeat": {
+        "conditional": false,
+        "periodical": true,
+        "comments": "Currently polling period is not configurable",
+        "tags": [
+          {
+
+            "tag": {
+              "tagname": "PLC_Heartbeat",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"PLC_Status\"",
+              "source": "plc"
+            }
+          }
+        ]
+      },
+      "VMEKHeartBeat": {
+        "conditional": false,
+        "periodical": true,
+        "comments": "Currently polling period is not configurable",
+        "tags": [
+          {
+            "tag": {
+              "tagname": "VMek_Heartbeat",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Vmek\".\"Heartbeat\"",
+              "source": "plc"
+            }
+          }
+        ]
+      },
+
+      "MachineMetrics": {
+        "conditional": false,
+        "periodical": false,
+        "comments": "Currently polling period is not configurable",
+        "tags": [
+          {
+            "tag": {
+              "tagname": "Conveyor_ThermalAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Conveyor\".\"Faults\".\"Thermal_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Conveyor_DisconnectSwitchAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Conveyor\".\"Faults\".\"DisconnectSwitch_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Conveyor_EmergencyAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Conveyor\".\"Faults\".\"Emergency_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Conveyor_WarningAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Conveyor\".\"Faults\".\"Warning_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Sheller_ThermalAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Sheller\".\"Faults\".\"Thermal_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Sheller_DisconnectSwitchAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Sheller\".\"Faults\".\"DisconnectSwitch_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Sheller_EmergencyAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Sheller\".\"Faults\".\"Emergency_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "Sheller_WarningAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"Sheller\".\"Faults\".\"Warning_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "SeedBoss_ThermalAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"SeedBoss\".\"Faults\".\"Thermal_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "SeedBoss_DisconnectSwitchAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"SeedBoss\".\"Faults\".\"DisconnectSwitch_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "SeedBoss_EmergencyAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"SeedBoss\".\"Faults\".\"Emergency_Alarm\"",
+              "source": "plc"
+            }
+          },
+          {
+            "tag": {
+              "tagname": "SeedBoss_WarningAlarm",
+              "in-use": true,
+              "nodeId": "ns=3;s=\"Harmann_Data\".\"SeedBoss\".\"Faults\".\"Warning_Alarm\"",
+              "source": "plc"
+            }
+          }
+        ]
+      }
+
+    }
+  },
+  "config": {
+    "mqtt_ca": "/greengrass/v2/AmazonRootCA1.pem",
+    "mqtt_cert": "/greengrass/v2/certificate.pem.crt",
+    "mqtt_private": "/greengrass/v2/private.pem.key",
+    "url": "http://localhost:3300/api/trials",
+    "message_interval": 120,
+    "comments": "Need to add other messages for example Trial ack, so one config file can be used for all"
+  }
+}

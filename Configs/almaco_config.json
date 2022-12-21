@@ -1,0 +1,215 @@
+{
+	"message_tag_list": {
+		"messages": {
+			"APLStatusChangeDetected": {
+				"conditional": false,
+
+				"cond-tag" :
+				{
+					"tag": {
+						"tagname": "TripSignal",
+						"in-use": false,
+						"nodeId": "ns=4;s=TripSignal",
+						"source" : "plc"
+					}
+
+				},
+				"tags":[{
+					"tag": {
+						"tagname": "TripSignal2",
+						"in-use": false,
+						"nodeId": "ns=4;s=TripSignal",
+						"source" : "plc"
+					}
+
+				}]
+			},
+			"MaterialProcessed": {
+				
+				"conditional": true,
+				
+				"cond-tag" : 
+				{
+					"tag": {
+						"tagname": "VMek_Completed",
+						"in-use": true,
+						"nodeId": "ns=4;s=Vmek_Data_Update_Done",
+						"source" : "plc"
+					}
+				
+				},
+				"periodical": false,
+				
+				"tags" :
+				[
+				{
+					"tag": {
+						"tagname": "MaterialId",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekSampleID",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "acceptedCount1",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekAccepted1",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "acceptedCount2",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekAccepted2",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "acceptedCount3",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekAccepted3",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "acceptedCount4",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekAccepted4",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "rejectedCount1",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekRejected1",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "rejectedCount2",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekRejected2",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "rejectedCount3",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekRejected3",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "rejectedCount4",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekRejected4",
+						"source" : "plc"
+					}
+				}, {
+					"tag": {
+						"tagname": "totalCount1",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekTotal1",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "totalCount2",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekTotal2",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "totalCount3",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekTotal3",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "totalCount4",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_VmekTotal4",
+						"source" : "plc"
+					}
+				},
+				{
+					"tag": {
+						"tagname": "OperatorName",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_OperatorName",
+						"source" : "plc"
+					}				
+				},
+				{
+					"tag": {
+						"tagname": "RecipeName",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_RecipeName",
+						"source" : "plc"
+					}				
+				},
+				{
+					"tag": {
+						"tagname": "RecipeDesignTimeInSeconds",
+						"in-use": true,
+						"nodeId": "ns=4;s=DBoard_RecipeEstCycleTime_Sec",
+						"source" : "plc"
+					}				
+				}
+			]},
+
+			"PLCHeartBeat": {
+				"conditional": false,
+				"periodical": true,
+				"comments":"Currently polling period is not configurable",
+				"tags" :[
+					{
+						"tag": {
+							"tagname": "PLC_Heartbeat",
+							"in-use": true,
+							"nodeId": "ns=4;s=DBoard_PLC_Heartbeat",
+							"source" : "plc"
+						}
+					}
+				]
+			},
+			"VMEKHeartBeat": {
+				"conditional": false,
+				"periodical": true,
+				"comments":"Currently polling period is not configurable",
+				"tags" :[
+					{
+						"tag": {
+							"tagname": "VMek_Heartbeat",
+							"in-use": true,
+							"nodeId": "ns=2;s=Status_Heartbeat",
+							"source" : "vmek"
+						}
+					}
+				]
+			}
+
+	}
+	},
+	"config":{
+		"mqtt_ca": "/greengrass/v2/AmazonRootCA1.pem",
+		"mqtt_cert": "/greengrass/v2/certificate.pem.crt",
+		"mqtt_private": "/greengrass/v2/private.pem.key",
+		"url" : "http://localhost:3300/api/trials",
+		"message_interval" : 120,
+		"comments" : "Need to add other messages for example Trial ack, so one config file can be used for all"
+	}
+}
